@@ -9,14 +9,16 @@ class Timer extends Component {
 
     // add your code here
     componentDidMount() {
-            this.interval = setInterval(() => {
-                this.clockTick()
+        this.interval = setInterval(() => {
+            this.clockTick()
         }, 1000);
     }
-
+    
+    
+    // ComponentWillUnmount is called...when the component is being removed from the DOM.
     componentWillUnmount() {
         console.log("Component Unmounted")
-        // clearInterval(this.interval)
+        clearInterval(this.interval)
     }
 
 
