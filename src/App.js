@@ -49,6 +49,7 @@ class App extends Component {
     this.setState(prevState => ({
       timerIDs: [...prevState.timerIDs, Math.floor(Math.random()*1000)]
     }))
+    console.log(this.state)
   }
 
   // removeTimer updates state, removing any timer that matches the provided author
@@ -56,6 +57,7 @@ class App extends Component {
     this.setState(prevState => ({
       timerIDs: prevState.timerIDs.filter(timer_id => timer_id !== id)
     }))
+    console.log(this.state)
   }
 
 
